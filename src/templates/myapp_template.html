@@ -1,0 +1,32 @@
+
+{% extends "index_main_page.html" %}
+{% block title %}My Hello Page{% endblock %}
+{% block content %}
+
+  <div style="color:green;">
+    Hellow from  CodeThunder<br>
+    Today is :  {{ today }}
+    <br>
+    <div>=======Conditions======</div>
+    <br>
+    {% if today.day == 1 %}
+     today is first Day
+
+     {% elif today.day == 30 %}
+      today is last day
+
+      {% else %}
+       today is someday!
+    {%endif%}
+    <br>
+    <br>
+    <div>=======Loops========</div>
+
+        <p>
+          {% for day in days_of_week %}
+             {{day}}
+        </p>
+          {% endfor %}
+  </div>
+
+{% endblock %}
